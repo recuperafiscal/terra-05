@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-terrabricks-black: #0a0a0a;
+  --color-terrabricks-copper: #b87333;
+  --color-terrabricks-orange: #d97706;
+  --color-terrabricks-brown: #451a03;
+  --color-terrabricks-earth: #78350f;
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; filter: blur(40px); }
+  50% { opacity: 0.6; filter: blur(60px); }
+}
+
+@layer base {
+  body {
+    @apply bg-terrabricks-black text-white antialiased selection:bg-terrabricks-copper/30;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+}
+
+.concrete-texture {
+  background-image: url("https://www.transparenttextures.com/patterns/pinstriped-suit.png");
+  background-color: #0a0a0a;
+}
+
+.glass-morphism {
+  @apply backdrop-blur-xl bg-white/10 border border-white/20;
+}
+
+.copper-gradient {
+  background: linear-gradient(135deg, #b87333 0%, #78350f 100%);
+}
+
+.text-gradient-copper {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-terrabricks-copper to-terrabricks-orange;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b87333;
+}

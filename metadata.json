@@ -1,0 +1,8 @@
+{
+  "name": "Terrabricks — Linktree Premium 3D",
+  "description": "Um link da bio premium para a Terrabricks, com visual cinematográfico, impacto 3D e banners comerciais de alta performance para a indústria de tijolos ecológicos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
